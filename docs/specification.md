@@ -1,17 +1,17 @@
 # 仕様
 
-対象: 音・声・反射入力ゲーム (Rank 66, Game No.5)
+- 名称: 音・声・反射入力ゲーム
+- Repo: sound-voice-reflex-game
+- Closed alpha platform: static Web playable prototype / optional microphone manual test
+- 主な公開先: GitHub Pages / BOOTH
 
-| 入力 | 用途 |
-| inputSource | 音・声・反射入力ゲーム の評価、表示、レポートに必要 |
-| promptCue | 音・声・反射入力ゲーム の評価、表示、レポートに必要 |
-| reactionMs | 音・声・反射入力ゲーム の評価、表示、レポートに必要 |
-| environmentProfile | 音・声・反射入力ゲーム の評価、表示、レポートに必要 |
+## 入力
 
-## 出力
+- `inputSource`
+- `reactionWindow`
+- `playerSignal`
+- `noiseLevel`
 
-- `dist/validation-result.json`
-- `dist/web-smoke-result.json`
-- `docs/qcds-strict-metrics.json`
-- `docs/qcds-regression-baseline.json`
-- `dist/sound-voice-reflex-game-docs.zip`
+## 主要機能
+
+代表シナリオ評価、Web表示、CLI評価、docs / QCDS / release evidence 生成。

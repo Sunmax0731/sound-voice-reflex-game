@@ -1,52 +1,33 @@
 {
   "product": "sound-voice-reflex-game",
   "rank": 66,
-  "tier": "P3",
-  "score": 49,
-  "domain": "Game",
   "ideaNo": 5,
-  "ideaName": "音・声・反射入力ゲーム",
-  "publicTarget": "GitHub Pages / BOOTH",
-  "formalRepoReadmeBeforeStart": "missing",
-  "nonPickupPrioritizedIdeas": {
-    "path": "D:/AI/IDEAS/NON_PICKUP_PRIORITIZED_IDEAS.md",
-    "rowBasis": "Rank 66 priority-list row, not Idea No order",
-    "note": "Priority table Japanese text was mojibake, so normalized idea name comes from ZIP metadata."
-  },
-  "lookup": {
-    "exactCreatedIdeaFolder": "D:/AI/Game/created_idea_005_sound-voice-reflex-game",
-    "exactCreatedIdeaFolderExists": true,
-    "exactZipFile": "D:/AI/Game/created_idea_005_sound-voice-reflex-game/idea_005_sound-voice-reflex-game.zip",
-    "exactZipFileExists": true,
-    "fallbackUsed": false,
-    "fallbackSearches": []
-  },
-  "zipMetadata": {
-    "domain": "Game",
-    "no": 5,
-    "idea": "音・声・反射入力ゲーム",
-    "repositoryName": "sound-voice-reflex-game",
-    "zipFile": "idea_005_sound-voice-reflex-game.zip",
-    "repositoryNameMatches": true
-  },
-  "requiredZipDocuments": {
-    "metadata.json": true,
-    "START_PROMPT.md": true,
-    "README.md": true,
-    "01_REQUIREMENTS.md": true,
-    "02_SPECIFICATION.md": true,
-    "03_DESIGN.md": true,
-    "04_IMPLEMENTATION_PLAN.md": true,
-    "05_TEST_PLAN.md": true,
-    "06_RELEASE_CHECKLIST.md": true
-  },
-  "domainDocs": [
-    "D:/AI/IDEAS/Game/Design.md",
-    "D:/AI/IDEAS/Game/Architecture.md",
-    "D:/AI/IDEAS/Game/AGENTS.md",
-    "D:/AI/IDEAS/Game/SKILL.md",
-    "D:/AI/Game/AGENTS.md",
-    "D:/AI/Game/SKILL.md"
+  "domain": "Game",
+  "nonPickupRow": "| 66 | P3 | 49 | Game | 5 | 音・声・反射入力ゲーム | sound-voice-reflex-game | GitHub Pages / BOOTH | 音声入力は環境差が大きく、いきなりマイク依存にするとプレイ不能になりやすい。 |",
+  "lookupRule": "exact created_idea and ZIP names were checked before fallback exploration",
+  "exactCreatedIdeaPath": "D:/AI/Game/created_idea_005_sound-voice-reflex-game",
+  "exactCreatedIdeaExists": true,
+  "ideasCreatedIdeaPath": "D:/AI/IDEAS/Game/created_idea_005_sound-voice-reflex-game",
+  "ideasCreatedIdeaExists": false,
+  "zipCandidates": [
+    {
+      "path": "D:/AI/Game/idea_005_sound-voice-reflex-game.zip",
+      "exists": false
+    },
+    {
+      "path": "D:/AI/Game/created_idea_005_sound-voice-reflex-game/idea_005_sound-voice-reflex-game.zip",
+      "exists": true
+    },
+    {
+      "path": "D:/AI/IDEAS/Game/idea_005_sound-voice-reflex-game.zip",
+      "exists": true
+    },
+    {
+      "path": "D:/AI/IDEAS/Game/created_idea_005_sound-voice-reflex-game/idea_005_sound-voice-reflex-game.zip",
+      "exists": false
+    }
   ],
-  "reconstructionPolicy": "Formal docs are regenerated in readable Japanese from NON PICKUP row, ZIP metadata, and domain docs; mojibake text is not copied."
+  "fallbackExploration": "not-required",
+  "reconstructionPolicy": "Do not copy mojibake text. Formal docs use clean Japanese based on NON_PICKUP row, domain docs, and available metadata.",
+  "repoReadmeAtStart": "exists"
 }

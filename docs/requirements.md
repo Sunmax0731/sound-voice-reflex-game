@@ -1,20 +1,16 @@
 # 要件定義
 
-対象: 音・声・反射入力ゲーム (Rank 66, Game No.5)
+## 対象
+
+| 66 | P3 | 49 | Game | 5 | 音・声・反射入力ゲーム | sound-voice-reflex-game | GitHub Pages / BOOTH | 音声入力は環境差が大きく、いきなりマイク依存にするとプレイ不能になりやすい。 |
 
 ## 目的
 
-音、声、タップの反応速度を短いチャレンジとして可視化する。
+音や声の代替入力を含む反射ゲームをブラウザで試し、入力遅延と環境差を確認する検証版。
 
-## 課題
+## 必須要件
 
-入力デバイスと環境差の検証が必要で、MVPの安定性が課題になる。
-
-## 要件
-
-- 必須入力 `inputSource`、`promptCue`、`reactionMs`、`environmentProfile` を検証する。
-- happy-path / missing-required / warning / mixed-batch を代表シナリオとして保持する。
-- CLI、静的Web UI、自動テスト、docs ZIP、release evidence を同一repoで完結させる。
-- 正式docsはNON PICKUP行、ZIP metadata、ドメインdocsを根拠に正常な日本語で再構成する。
-
-静的Webまたはローカルサーバーで確認できる browser game として、非blank表示、主要要素、主要操作を検証します。
+- 代表シナリオ4種を自動検証する。
+- GitHub Pagesまたはローカルサーバーで起動できる静的Webゲームとして、非blank表示と主要操作を必須とする。
+- 文字化けを検出し、正式成果物へ残さない。
+- QCDSの10段階スケールを機械検証する。

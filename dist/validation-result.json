@@ -44,6 +44,7 @@
       }
     ]
   },
+  "platformRuntimeGate": "static Web playable prototype / optional microphone manual test",
   "generatedArtifacts": [
     "dist/validation-result.json",
     "dist/web-smoke-result.json",

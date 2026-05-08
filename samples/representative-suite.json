@@ -5,12 +5,12 @@
     {
       "id": "happy-path",
       "type": "happy-path",
-      "title": "音キューの通常処理",
+      "title": "音・声・反射入力ゲームの通常フロー",
       "inputs": {
-        "inputSource": "tap",
-        "promptCue": "blue-beat",
-        "reactionMs": 184,
-        "environmentProfile": "quiet-room"
+        "inputSource": "keyboard",
+        "reactionWindow": 620,
+        "playerSignal": "tap",
+        "noiseLevel": "clear"
       },
       "expected": {
         "status": "pass",
@@ -23,10 +23,10 @@
       "type": "missing-required",
       "title": "inputSource不足時の停止",
       "inputs": {
-        "inputSource": "",
-        "promptCue": "blue-beat",
-        "reactionMs": 184,
-        "environmentProfile": "quiet-room"
+        "inputSource": "keyboard",
+        "reactionWindow": "",
+        "playerSignal": "tap",
+        "noiseLevel": "clear"
       },
       "expected": {
         "status": "error",
@@ -37,12 +37,12 @@
     {
       "id": "warning",
       "type": "warning",
-      "title": "声入力の注意喚起",
+      "title": "ノイズ環境での入力警告",
       "inputs": {
-        "inputSource": "mic-simulated",
-        "promptCue": "red-pop",
-        "reactionMs": 520,
-        "environmentProfile": "noisy-room"
+        "inputSource": "microphone",
+        "reactionWindow": 260,
+        "playerSignal": "clap",
+        "noiseLevel": "noisy"
       },
       "flags": [
         "needsReview"
@@ -56,25 +56,25 @@
     {
       "id": "mixed-batch",
       "type": "mixed-batch",
-      "title": "反応速度を含む混在バッチ",
+      "title": "正常・不足・警告を含む混在バッチ",
       "items": [
         {
-          "inputSource": "tap",
-          "promptCue": "blue-beat",
-          "reactionMs": 184,
-          "environmentProfile": "quiet-room"
+          "inputSource": "keyboard",
+          "reactionWindow": 620,
+          "playerSignal": "tap",
+          "noiseLevel": "clear"
         },
         {
-          "inputSource": "",
-          "promptCue": "blue-beat",
-          "reactionMs": 184,
-          "environmentProfile": "quiet-room"
+          "inputSource": "keyboard",
+          "reactionWindow": "",
+          "playerSignal": "tap",
+          "noiseLevel": "clear"
         },
         {
-          "inputSource": "mic-simulated",
-          "promptCue": "red-pop",
-          "reactionMs": 520,
-          "environmentProfile": "noisy-room"
+          "inputSource": "microphone",
+          "reactionWindow": 260,
+          "playerSignal": "clap",
+          "noiseLevel": "noisy"
         }
       ],
       "expected": {
