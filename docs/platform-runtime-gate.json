@@ -1,0 +1,13 @@
+{
+  "product": "sound-voice-reflex-game",
+  "title": "音・声・反射入力ゲーム",
+  "domain": "Game",
+  "ideaNo": 5,
+  "platformType": "browser-web",
+  "expectedPublicTarget": "GitHub Pages / BOOTH",
+  "browser": {
+    "evidence": "dist/web-smoke-result.json"
+  },
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
