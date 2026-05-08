@@ -1,0 +1,87 @@
+{
+  "product": "sound-voice-reflex-game",
+  "rank": 66,
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "type": "happy-path",
+      "title": "音キューの通常処理",
+      "inputs": {
+        "inputSource": "tap",
+        "promptCue": "blue-beat",
+        "reactionMs": 184,
+        "environmentProfile": "quiet-room"
+      },
+      "expected": {
+        "status": "pass",
+        "accepted": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "type": "missing-required",
+      "title": "inputSource不足時の停止",
+      "inputs": {
+        "inputSource": "",
+        "promptCue": "blue-beat",
+        "reactionMs": 184,
+        "environmentProfile": "quiet-room"
+      },
+      "expected": {
+        "status": "error",
+        "accepted": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "warning",
+      "type": "warning",
+      "title": "声入力の注意喚起",
+      "inputs": {
+        "inputSource": "mic-simulated",
+        "promptCue": "red-pop",
+        "reactionMs": 520,
+        "environmentProfile": "noisy-room"
+      },
+      "flags": [
+        "needsReview"
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 1,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "type": "mixed-batch",
+      "title": "反応速度を含む混在バッチ",
+      "items": [
+        {
+          "inputSource": "tap",
+          "promptCue": "blue-beat",
+          "reactionMs": 184,
+          "environmentProfile": "quiet-room"
+        },
+        {
+          "inputSource": "",
+          "promptCue": "blue-beat",
+          "reactionMs": 184,
+          "environmentProfile": "quiet-room"
+        },
+        {
+          "inputSource": "mic-simulated",
+          "promptCue": "red-pop",
+          "reactionMs": 520,
+          "environmentProfile": "noisy-room"
+        }
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 2,
+        "warnings": 2
+      }
+    }
+  ]
+}
